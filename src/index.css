@@ -55,3 +55,25 @@
 .animate-floating {
   animation: floating 4s ease-in-out infinite;
 }
+
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  40% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  60% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.hover-animate-whatsapp:hover {
+  animation: whatsappPulse 1.8s ease-in-out infinite;
+}

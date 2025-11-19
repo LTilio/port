@@ -22,9 +22,7 @@ export default function Footer() {
         <hr className="border-gray-800/30 mb-5" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-sm font-poppins">
-            &copy;2025 Ltilio, Inc. All rights reserved.
-          </p>
+          <p className="text-sm font-poppins">&copy;2025 Ltilio, Inc. All rights reserved.</p>
 
           <div className="flex gap-2 text-xl">
             {icons
@@ -37,7 +35,11 @@ export default function Footer() {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-stone-700 dark:hover:text-white hover:scale-105 transform transition cursor-pointer"
+                    className={`
+                      hover:text-stone-700 dark:hover:text-white 
+                      hover:scale-105 transform transition cursor-pointer
+                      ${item.icon === FaWhatsapp ? "hover-animate-whatsapp" : ""}
+                    `}
                   >
                     <Icon size={30} />
                   </a>

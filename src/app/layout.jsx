@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
 
 export default function Layout() {
   return (
@@ -13,6 +14,7 @@ export default function Layout() {
         text-stone-800
       "
     >
+      <Header />
       <main className="flex-1 mb-[95px] font-poppins ">
         <Outlet />
       </main>
