@@ -1,5 +1,7 @@
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
-
+// import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
+// import { FaCss3, FaDocker, FaGolang, FaHtml5, FaJava, FaJs, FaNode, FaReact } from "react-icons/fa6";
+// import { SiNestjs, SiOpentelemetry, SiSpring, SiTailwindcss } from "react-icons/si";
 export default function Footer() {
   const icons = [
     { icon: FaLinkedin, url: "https://www.linkedin.com/in/leandro-tilio/" },
@@ -19,8 +21,22 @@ export default function Footer() {
       {/* WRAPPER CENTRALIZADO */}
       <div className="max-w-6xl mx-auto px-5">
         {/* Agora o HR está dentro do wrapper → fica centralizado */}
+        {/* <div className="flex flex-wrap justify-around gap-5 m-1">
+          <FaJs size={30} />
+          <BiLogoTypescript size={30} />
+          <FaReact size={30} />
+          <SiNestjs size={30} />
+          <FaJava size={30} />
+          <SiSpring size={30} />
+          <SiTailwindcss size={30} />
+          <FaHtml5 size={30} />
+          <FaCss3 size={30} />
+          <FaGolang size={30} />
+          <SiOpentelemetry size={30} />
+          <FaDocker size={30} />
+          <BiLogoPostgresql size={30} />
+        </div> */}
         <hr className="border-gray-800/30 mb-5" />
-
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-sm font-poppins">&copy;2025 Ltilio, Inc. All rights reserved.</p>
 

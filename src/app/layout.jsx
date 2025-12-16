@@ -18,7 +18,6 @@ export default function Layout() {
       <main className="flex-1 mb-[95px] font-poppins ">
         <Outlet />
       </main>
-
       <Footer />
     </div>
   );

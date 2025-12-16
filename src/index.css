@@ -17,6 +17,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-roboto: "Roboto", sans-serif;
