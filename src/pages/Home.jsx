@@ -1,4 +1,5 @@
 import { CardProj } from "../components/ui/CardProj";
+import { EmblaCarousel } from "../components/ui/EmblaCarousel";
 
 export const Home = () => {
   return (
@@ -8,18 +9,28 @@ export const Home = () => {
           <span className="font-bold text-3xl">Sou Leandro Tilio,</span>{" "}
           <span className="text-lg font-medium mb-5">Desenvolvedor full-stack</span>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <CardProj />
-          <CardProj
-            title="Projeto 1"
-            description="     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil vel ratione repudiandae ex sapiente. Quos,
-        delectus, impedit fugiat doloribus, aspernatur quisquam labore incidunt vitae officia rem consectetur. Eos,
-        praesentium. Alias, consequuntur. Molestiae dolorum dicta necessitatibus sequi quas, ad repellat iusto
-        distinctio animi numquam incidunt laudantium, error totam culpa cupiditate."
-            tags={["React", "Node.js"]}
-            href="#"
-          />
-        </div>
+        <EmblaCarousel
+          projects={[
+            {
+              title: "Projeto 1",
+              description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+              tags: ["React", "Node.js"],
+              href: "#",
+            },
+            {
+              title: "Projeto 2",
+              description: "Exemplo de projeto simples usando React e Node.js.",
+              tags: ["React", "Node.js"],
+              href: "#",
+            },
+            {
+              title: "Projeto 3",
+              description: "Outro projeto com foco em backend e integrações.",
+              tags: ["NestJS", "PostgreSQL"],
+              href: "#",
+            },
+          ]}
+        />
       </div>
     </>
   );

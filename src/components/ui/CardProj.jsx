@@ -1,30 +1,55 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useEffect, useRef, useState } from "react";
+
 import testeimg from "../../assets/img/image.png";
 
 export function CardProj({ title, description, tags, href, imgSrc }) {
+  const descRef = useRef(null);
+  const [isClamped, setIsClamped] = useState(false);
+
   title = title || "Project Title";
   description = description || "Project Description";
   tags = tags || ["tag1", "tag2"];
   href = href || "#home";
   imgSrc = imgSrc || null;
+
+  useEffect(() => {
+    const checkClamp = () => {
+      const el = descRef.current;
+      if (!el) return;
+      setIsClamped(el.scrollHeight > el.clientHeight);
+    };
+
+    checkClamp();
+
+    window.addEventListener("resize", checkClamp);
+    return () => window.removeEventListener("resize", checkClamp);
+  }, [description]);
+
   return (
-    <div className="bg-white m-3 max-w-[360px] rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+    <div className="bg-white m-3 w-[350px] h-[400px] rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
       {/* Imagem */}
       <img src={imgSrc || testeimg} alt="project image" className="w-full h-[180px] object-cover rounded-t-xl" />
 
       {/* Conteúdo */}
-      <div className="p-5 flex flex-col flex-1 gap-3">
+      <div className="p-5 flex flex-col flex-1 gap-1">
         <h3 className="text-lg font-semibold text-stone-900">{title}</h3>
 
         {/* Descrição */}
-        <p className="text-sm text-stone-600 leading-relaxed line-clamp-3">{description}</p>
-        {/* <div className="relative group">
-          <p className="line-clamp-3 text-sm text-stone-600">{description}</p>
-
-          <div className="absolute z-20 hidden group-hover:block bg-white p-3 shadow-lg rounded-lg text-sm text-stone-700 max-w-sm">
+        {/* <p className="text-sm text-stone-600 leading-relaxed line-clamp-3">{description}</p> */}
+        <div className="relative group">
+          <p ref={descRef} className="line-clamp-3 text-sm text-stone-600">
             {description}
-          </div>
-        </div> */}
+          </p>
+          {isClamped && (
+            // <span className="absolute bottom-0 right-0 bg-linear-to-l from-white via-amber-950 to-transparent px-2 text-sm text-stone-600 cursor-pointer">
+            //   ...
+            // </span>
+            <div className="absolute z-20 hidden group-hover:block bg-white p-3 shadow-lg rounded-lg text-sm text-stone-700 max-w-sm min-w-sm">
+              {description}
+            </div>
+          )}
+        </div>
         {/* Empurra tudo abaixo para o fundo */}
         <div className="mt-auto flex flex-col gap-3">
           {/* Tags */}
