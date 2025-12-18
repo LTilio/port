@@ -27,7 +27,7 @@ export function CardProj({ title, description, tags, href, imgSrc }) {
   }, [description]);
 
   return (
-    <div className="bg-white m-3 w-[350px] h-[400px] rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
+    <div className="overflow-y-visible bg-white m-3 w-[350px] h-[400px] rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
       {/* Imagem */}
       <img src={imgSrc || testeimg} alt="project image" className="w-full h-[180px] object-cover rounded-t-xl" />
 
@@ -45,7 +45,7 @@ export function CardProj({ title, description, tags, href, imgSrc }) {
             // <span className="absolute bottom-0 right-0 bg-linear-to-l from-white via-amber-950 to-transparent px-2 text-sm text-stone-600 cursor-pointer">
             //   ...
             // </span>
-            <div className="absolute z-20 hidden group-hover:block bg-white p-3 shadow-lg rounded-lg text-sm text-stone-700 max-w-sm min-w-sm">
+            <div className="absolute z-20 hidden group-hover:block bg-stone-100 p-3 shadow-lg rounded-lg text-sm text-stone-700 left-2 top-2 transform transition-all">
               {description}
             </div>
           )}

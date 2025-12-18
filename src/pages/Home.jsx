@@ -13,19 +13,21 @@ export const Home = () => {
           projects={[
             {
               title: "Projeto 1",
-              description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+              description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
               tags: ["React", "Node.js"],
               href: "#",
             },
             {
               title: "Projeto 2",
-              description: "Exemplo de projeto simples usando React e Node.js.",
+              description:
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam aperiam laborum quibusdam est et eaque consectetur totam neque, debitis animi incidunt, ipsum id officiis excepturi libero eius ab nostrum doloremque? Amet quam ducimus eligendi illo obcaecati illum consequatur vitae maxime minima magni, exercitationem aspernatur, sed, mollitia aperiam dolorum cum porro?",
               tags: ["React", "Node.js"],
               href: "#",
             },
             {
               title: "Projeto 3",
-              description: "Outro projeto com foco em backend e integrações.",
+              description:
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam aperiam laborum quibusdam est et eaque consectetur totam neque, debitis animi incidunt, ipsum id officiis excepturi libero eius ab nostrum doloremque? Amet quam ducimus eligendi illo obcaecati illum consequatur vitae maxime minima magni, exercitationem aspernatur, sed, mollitia aperiam dolorum cum porro?",
               tags: ["NestJS", "PostgreSQL"],
               href: "#",
             },
