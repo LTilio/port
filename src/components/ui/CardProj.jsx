@@ -36,20 +36,17 @@ export function CardProj({ title, description, tags, href, imgSrc }) {
         <h3 className="text-lg font-semibold text-stone-900">{title}</h3>
 
         {/* Descrição */}
-        {/* <p className="text-sm text-stone-600 leading-relaxed line-clamp-3">{description}</p> */}
         <div className="relative group">
           <p ref={descRef} className="line-clamp-3 text-sm text-stone-600">
             {description}
           </p>
           {isClamped && (
-            // <span className="absolute bottom-0 right-0 bg-linear-to-l from-white via-amber-950 to-transparent px-2 text-sm text-stone-600 cursor-pointer">
-            //   ...
-            // </span>
-            <div className="absolute z-20 hidden group-hover:block bg-stone-100 p-3 shadow-lg rounded-lg text-sm text-stone-700 left-2 top-2 transform transition-all">
-              {description}
+            <div className="absolute line z-20 hidden group-hover:block bg-stone-100 p-3 shadow-lg rounded-lg text-[13px] text-stone-700 left-2 top-2 transform transition-all">
+              <p className="line-clamp-10">{description}</p>
             </div>
           )}
         </div>
+
         {/* Empurra tudo abaixo para o fundo */}
         <div className="mt-auto flex flex-col gap-3">
           {/* Tags */}
